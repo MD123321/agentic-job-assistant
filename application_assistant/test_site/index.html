@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="no">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Testportal – Summer Internship 2027</title>
+    <style>
+      body { max-width: 720px; margin: 40px auto; padding: 0 20px; font: 16px/1.5 system-ui; color: #18211b; }
+      form { display: grid; gap: 14px; }
+      label { display: grid; gap: 5px; font-weight: 650; }
+      input, textarea, select { padding: 9px; font: inherit; }
+      textarea { min-height: 90px; }
+      fieldset { display: grid; gap: 8px; }
+      fieldset label { display: block; font-weight: 400; }
+      button { padding: 10px; background: #244c35; color: white; border: 0; }
+      #message { color: #9d2020; font-weight: 700; }
+    </style>
+  </head>
+  <body>
+    <h1>Summer Internship 2027 – lokal testportal</h1>
+    <p>Denne siden sender ingen data. Den brukes bare for å kontrollere Jobbagents utfylling.</p>
+    <form id="application-form">
+      <label>Fornavn <input name="first_name" autocomplete="given-name" required></label>
+      <label>Etternavn <input name="last_name" autocomplete="family-name" required></label>
+      <label>E-post <input name="email" type="email" autocomplete="email" required></label>
+      <label>Telefon <input name="phone" type="tel" autocomplete="tel"></label>
+      <label>Bosted <input name="city" autocomplete="address-level2"></label>
+      <label>Preferred location
+        <select name="preferred_location">
+          <option value="">Velg</option>
+          <option>Oslo</option>
+          <option>Bergen</option>
+        </select>
+      </label>
+      <label>LinkedIn <input name="linkedin" type="url"></label>
+      <label>Skole/universitet <input name="school"></label>
+      <label>Grad <input name="degree"></label>
+      <label>Forventet fullføring <input name="graduation"></label>
+      <label>Språk <input name="languages"></label>
+      <label>Ferdigheter <textarea name="skills"></textarea></label>
+      <label>Arbeidserfaring <textarea name="experience"></textarea></label>
+      <label>Tilgjengelighet <input name="availability"></label>
+      <label>Søknadsbrev <textarea name="cover_letter"></textarea></label>
+      <label>Ønsket lønn <input name="salary"></label>
+      <fieldset>
+        <legend>Which work areas are you interested in?</legend>
+        <label><input type="checkbox" name="work_area_analytics" value="Analytics"> Analytics</label>
+        <label><input type="checkbox" name="work_area_finance" value="Finance"> Finance</label>
+      </fieldset>
+      <fieldset>
+        <legend>Communication language</legend>
+        <label><input type="radio" name="communication_language" value="English"> English</label>
+        <label><input type="radio" name="communication_language" value="Norwegian"> Norwegian</label>
+      </fieldset>
+      <fieldset>
+        <legend>Er du juridisk autorisert til å arbeide i Norge?</legend>
+        <label><input type="radio" name="work_authorization" value="yes"> Ja</label>
+        <label><input type="radio" name="work_authorization" value="no"> Nei</label>
+      </fieldset>
+      <fieldset>
+        <legend>Gender</legend>
+        <label><input type="radio" name="gender" value="Female"> Female</label>
+        <label><input type="radio" name="gender" value="Male"> Male</label>
+        <label><input type="radio" name="gender" value="Prefer not to say"> Prefer not to say</label>
+      </fieldset>
+      <label>Year of birth <input name="birth_year" type="number"></label>
+      <label>Last opp CV <input name="cv" type="file" accept=".pdf,.doc,.docx"></label>
+      <label>Upload transcript <input name="transcript" type="file" accept=".pdf"></label>
+      <label><input name="consent" type="checkbox"> Jeg godtar vilkårene</label>
+      <button id="submit-application" type="submit">Send søknad</button>
+    </form>
+    <p id="message" role="status"></p>
+    <script>
+      document.getElementById("application-form").addEventListener("submit", (event) => {
+        event.preventDefault();
+        document.getElementById("message").textContent =
+          "Testportalen sender aldri søknaden. Manuell send er simulert og blokkert.";
+      });
+    </script>
+  </body>
+</html>

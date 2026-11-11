@@ -1,0 +1,14 @@
+__pycache__/
+*.py[cod]
+.venv/
+.env
+.DS_Store
+.vscode/
+
+# Private runtime data
+config/profile.toml
+data/*.toml
+reports/*.md
+diagnostics/
+application_assistant/local_data/
+

@@ -1,0 +1,41 @@
+# Fictional configuration for local testing.
+
+[candidate]
+degree = "Bachelor of Data Science"
+school = "Example University"
+study_stage = "Final-year undergraduate"
+availability = "Flexible internship availability"
+
+[background]
+highlights = [
+  "Built a small AI workflow for document classification",
+  "Worked on a student analytics project",
+]
+skills = [
+  "Python",
+  "data analysis",
+  "LLM workflows",
+  "structured evaluation",
+]
+
+[search]
+year = 2027
+lookback_days = 14
+locations = ["Oslo", "Remote"]
+rotation_start = "2026-09-01"
+job_types = ["internship", "student", "graduate"]
+primary_roles = ["AI engineer internship", "data science internship"]
+secondary_roles = ["software internship", "product analytics internship"]
+keywords = ["AI internship", "data science internship", "student developer"]
+
+[sources]
+enabled = ["company_careers"]
+
+[[sources.queries]]
+name = "AI and data roles"
+
+[[sources.queries.variants]]
+name = "Direct company listings"
+query = "AI engineer data science internship Oslo student"
+include_domains = []
+

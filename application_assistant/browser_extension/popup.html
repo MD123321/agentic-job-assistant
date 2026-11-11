@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="no">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Jobbagent</title>
+    <link rel="stylesheet" href="popup.css">
+  </head>
+  <body>
+    <main>
+      <header>
+        <p class="eyebrow">SØKNADSASSISTENT</p>
+        <h1>Fyll ut med Jobbagent</h1>
+        <p>Du kontrollerer alt. Jobbagent sender aldri søknaden.</p>
+      </header>
+
+      <section class="connection">
+        <label for="token">Lokalt tjenestetoken</label>
+        <div class="token-row">
+          <input id="token" type="password" autocomplete="off" placeholder="Lim inn token fra local_data">
+          <button id="save-token" class="secondary" type="button">Lagre</button>
+        </div>
+      </section>
+
+      <button id="scan" class="primary" type="button">Fyll ut med Jobbagent</button>
+      <p id="status" role="status">Klar til å lese det synlige skjemaet.</p>
+
+      <section id="preview" hidden>
+        <div id="summary" class="summary"></div>
+        <div id="cv" class="cv"></div>
+        <div id="field-groups"></div>
+        <button id="fill" class="primary" type="button">Fyll inn valgte felt</button>
+        <p class="manual-warning">Valgte dokumenter lastes opp til den åpne arbeidsgiversiden. Endelig innsending er alltid manuell.</p>
+      </section>
+
+      <section id="result" hidden></section>
+    </main>
+    <script src="form_tools.js"></script>
+    <script src="popup.js"></script>
+  </body>
+</html>

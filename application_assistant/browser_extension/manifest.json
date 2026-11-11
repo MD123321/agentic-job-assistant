@@ -1,0 +1,12 @@
+{
+  "manifest_version": 3,
+  "name": "Jobbagent Søknadsassistent",
+  "version": "0.3.0",
+  "description": "GPT tolker søknadsfelt og klargjør lokale dokumenter; du sender selv.",
+  "permissions": ["activeTab", "scripting", "storage"],
+  "host_permissions": ["http://127.0.0.1:8765/*"],
+  "action": {
+    "default_title": "Fyll ut med Jobbagent",
+    "default_popup": "popup.html"
+  }
+}

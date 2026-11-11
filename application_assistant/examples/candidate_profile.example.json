@@ -1,0 +1,38 @@
+{
+  "personal": {
+    "first_name": "Ola",
+    "last_name": "Nordmann",
+    "email": "ola.nordmann@example.com",
+    "phone": "+47 000 00 000",
+    "gender": "Male",
+    "date_of_birth": "2004-01-01",
+    "city": "Oslo",
+    "linkedin": "https://www.linkedin.com/in/example"
+  },
+  "education": {
+    "school": "Eksempel Handelshøyskole",
+    "degree": "Bachelor i økonomi",
+    "expected_graduation": "",
+    "start_year": 2024,
+    "duration_years": 3
+  },
+  "experience": [
+    {
+      "company": "Eksempel AS",
+      "role": "Analytikerpraktikant",
+      "summary": "Analyserte dokumenterte markedsdata og laget beslutningsgrunnlag."
+    }
+  ],
+  "languages": ["Norsk", "Engelsk"],
+  "skills": ["Finansiell analyse", "Python", "SQL"],
+  "availability": "Tilgjengelig juni til august 2027",
+  "approved_answers": {
+    "notice_period": "Ikke relevant – student",
+    "preferred_location": "Oslo",
+    "communication_language": "English"
+  },
+  "documents": {
+    "standard_cv": "standard-cv.pdf",
+    "bachelor_transcript": "bachelor-transcript.pdf"
+  }
+}
